@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>This Is The Page Here I Will Upload My VideoUrl</title>
+    <link href="{{url_for('static',filename='for_url_page.css')}}" rel="stylesheet"/>
+  </head>
+  <body>
+      <div class="form-container">
+          <form action="/submit" method="post">
+              <label class="text">Give Youtube Video Url</label>
+              <input type="text" class="url-box" name="url-inp">
+              <button class="btn" type="submit">Submit</button>
+          </form>
+      </div>
+  </body>
+</html>

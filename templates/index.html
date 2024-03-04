@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Thumbnail Color Analizer</title>
+    <link href="{{url_for('static',filename='style.css')}}" rel="stylesheet"/>
+</head>
+<body>
+    <div class="thumbnail-img-container">
+        <img class="thumbnail-img" src="{{url_img}}" alt="thumbnail-image">
+    </div>
+    <div class="all-color-container" style="display: flex; flex-wrap: wrap; align-content: flex-start;">
+        {% for ind in range(0,pixel_val_box|length) %}
+            <div class="color-box" style="width:{{box_width_height[ind][0]}}px; height:{{box_width_height[ind][1]}}px; background-color:rgb{{pixel_val_box[ind]}};">&nbsp;</div>
+        {% endfor %}
+    </div>
+</body>
+</html>
